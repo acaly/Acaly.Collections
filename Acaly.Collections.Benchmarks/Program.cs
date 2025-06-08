@@ -25,6 +25,8 @@ namespace Acaly.Collections.Benchmarks
         private readonly ConcurrentDictionary<int, int> _concurrentDict;
         private readonly int[] _keys;
 
+        private const int Capacity = 23;
+        private const int Buckets = 17;
         private const int KeyCount = 8;
         private const int KeyRead = 5;
 
@@ -32,15 +34,15 @@ namespace Acaly.Collections.Benchmarks
         {
             _keys = [.. Enumerable.Range(0, KeyCount)];
 
-            _lookupTable = new ConcurrentLookupTable<int, int>(23, 17);
+            _lookupTable = new ConcurrentLookupTable<int, int>(Capacity, Buckets);
             foreach (var i in _keys)
                 _lookupTable.GetOrAdd(i, i * 2);
 
-            _dict = new Dictionary<int, int>(23);
+            _dict = new Dictionary<int, int>(Capacity);
             foreach (var i in _keys)
                 _dict[i] = i * 2;
 
-            _concurrentDict = new ConcurrentDictionary<int, int>(2, 23);
+            _concurrentDict = new ConcurrentDictionary<int, int>(2, Capacity);
             foreach (var i in _keys)
                 _concurrentDict[i] = i * 2;
         }
