@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acaly.Collections", "Acaly.Collections\Acaly.Collections.csproj", "{ED1CECE8-9289-4AF9-9E94-8CB367C302AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acaly.Collections.Benchmarks", "Acaly.Collections.Benchmarks\Acaly.Collections.Benchmarks.csproj", "{FB3E5C96-1D6D-4437-BDDB-A93F66092C64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED1CECE8-9289-4AF9-9E94-8CB367C302AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1CECE8-9289-4AF9-9E94-8CB367C302AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1CECE8-9289-4AF9-9E94-8CB367C302AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1CECE8-9289-4AF9-9E94-8CB367C302AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3E5C96-1D6D-4437-BDDB-A93F66092C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3E5C96-1D6D-4437-BDDB-A93F66092C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3E5C96-1D6D-4437-BDDB-A93F66092C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3E5C96-1D6D-4437-BDDB-A93F66092C64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {787EA71C-8321-46C9-B695-14AE9B0A62DE}
+	EndGlobalSection
+EndGlobal
