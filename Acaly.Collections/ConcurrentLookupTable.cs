@@ -58,7 +58,7 @@ namespace Acaly.Collections
             return hash == 0 ? 1 : hash;
         }
 
-        public TValue this[TKey key]
+        public ref TValue this[TKey key]
         {
             get
             {
@@ -67,15 +67,7 @@ namespace Acaly.Collections
                 {
                     throw new KeyNotFoundException();
                 }
-                return r;
-            }
-            set
-            {
-                ref var r = ref GetValueRefOrAddValue(key, value, out var exists);
-                if (exists)
-                {
-                    r = value;
-                }
+                return ref r;
             }
         }
 
