@@ -15,6 +15,11 @@ comparable to `Dictionary` on single-thread case and `ConcurrentDictionary` on m
 or ensure the most frequently accessed items are inserted first.
 * When a new item cannot find a place within the size limit, it will be put on the fallback `Dictionary`,
 which is always accessed with a lock, and will not benefit from the performance advantage.
+* Writing with the ref returned from this container from multiple threads concurrently (or reading while writing) is unsafe,
+unless the read and write operations are atomic. 
+(This is also one of the reasons for which `ConcurrentDictionary` does not return ref.)
+However, as mensioned above, ref is still useful in many cases, so some of these methods are kept.
+Be careful when modifying the value after inserting.
 
 The most common usage is as a global cache of key-value pairs of known size. 
 
